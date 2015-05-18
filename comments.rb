@@ -1,7 +1,7 @@
 require './db_setup'
-class CommentsMigration < ActiveRecord::Migration
+class CommentMigration < ActiveRecord::Migration
   def change
-    create_table :clients do |t|
+    create_table :comment do |t|
       t.integer :developer_id
       t.text :comment
       t.integer :project_id

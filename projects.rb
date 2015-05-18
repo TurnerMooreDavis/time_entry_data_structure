@@ -5,5 +5,6 @@ class ProjectMigration < ActiveRecord::Migration
       t.string :name
       t.date :start_on
       t.integer :client_id
+    end
   end
 end
