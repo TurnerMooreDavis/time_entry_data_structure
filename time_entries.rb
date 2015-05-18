@@ -1,14 +1,11 @@
 require './db_setup'
-class EmployeeMigration < ActiveRecord::Migration
+class TimeEntryMigration < ActiveRecord::Migration
   def change
-    create_table :employees do |t|
-      t.string :name
-      t.decimal :salary
-      t.integer :department_id
-    end
-
-    create_table :departments do |t|
-      t.string :name
+    create_table :time_entry do |t|
+      t.integer :developer_id
+      t.integer :project_id
+      t.date :work_on
+      t.float :time_worked
     end
   end
 end
